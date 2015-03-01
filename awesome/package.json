@@ -1,0 +1,17 @@
+{
+  "name": "panorama-location",
+  "version": "0.0.1",
+  "description": "A app to show you a panorama of your current location",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Filip Hindemark",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^2.1.0",
+    "express": "^4.12.0",
+    "gulp": "^3.8.11",
+    "nock": "^0.59.1"
+  }
+}
