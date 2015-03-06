@@ -3,7 +3,9 @@ define([], function() {
     post: function (data, url, callback) {
       var request = new XMLHttpRequest();
       request.open('POST', url, true);
-      request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+      request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+      data = JSON.stringify(data);
 
       request.onreadystatechange = function() {//Call a function when the state changes.
       	if(request.readyState == 4 && request.status == 200) {

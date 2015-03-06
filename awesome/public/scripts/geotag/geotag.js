@@ -8,8 +8,10 @@ define(['../external/modernizr', '../routing', '../functions'], function(moderni
 
     var data = {
       'latitude': this.latitude,
-      'longitude': this.longitude,
+      'longitude': this.longitude
     }
+    console.log(data);
+    
     functions.post(data, routing.get_panorama);
   }
   return {
