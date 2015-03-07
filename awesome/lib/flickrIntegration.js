@@ -17,6 +17,8 @@ var flickrIntegration = {
     this.secret = data['secret'];
   },
   getToken: function () {
+    var integration = this;
+
     if (!(typeof this.apiKey === "string")) {
       throw new Error('api_key not included');
     };
@@ -27,8 +29,13 @@ var flickrIntegration = {
     var credentials = this.getApiCredentials();
 
     this.flickr = Flickr.tokenOnly(credentials, function(error, flickr) {
+      console.log(flickr);
+      console.log(error);
+
       if (!error) {
-        return flickr;
+        console.log('no error returned from flickr');
+
+        integration.flickr = flickr;
       }
       else {
         throw new Error('could not get token');
