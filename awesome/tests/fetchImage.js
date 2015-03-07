@@ -7,5 +7,9 @@ describe("fetchImage", function() {
          var img = fetch.fetchImage();
          expect(img).to.equal(null);
        });
+       it("should send the longitude and latitude to the flickr API", function(){
+         var img = fetch.fetchImage();
+         expect(img).to.equal(null);
+       });
    });
 });

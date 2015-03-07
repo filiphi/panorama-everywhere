@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
+
 exports.setup = function() {
   app.set("views", __dirname + "/../views");
   app.set('view engine', 'jade');
@@ -17,7 +18,8 @@ exports.setup = function() {
 
   });
 
-  app.post('/panorama', function(req, res) {
+  app.post('/image', function(req, res) {
+
     res.json({'req': req.body});
   });
 

@@ -1,5 +1,5 @@
 define([], function() {
   return {
-    get_panorama: "/panorama"
+    get_panorama: "/image"
   };
 });
